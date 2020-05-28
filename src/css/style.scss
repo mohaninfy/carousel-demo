@@ -1,0 +1,204 @@
+/* Define standard variables and values for website */
+$bgcolor: #000;
+$textcolor: #fff;
+$fontsize: 18px;
+$w100: 100%;
+$pad10: 10px;
+$m-auto:0 auto;
+
+$parent: relative;
+$child: absolute;
+
+$zero: 0px;
+$hidden: hidden;
+
+
+$floatleft: left;
+$floatright: right;
+$text-center: center;
+
+$w50: 50%;
+$w80: 80%;
+
+$table: table;
+$tablecell: table-cell;
+$middlealign: middle;
+
+$pointer: pointer;
+
+$trasition: linear 1s ease-in;
+
+$iconsize: 20px;
+
+/* Use the variables */
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+  padding: $zero;
+  margin: $zero;
+  overflow-x: $hidden;
+}
+.w100{
+  width:$w100;
+}
+.h100{
+  height: $w100;
+}
+.pad10{
+  padding: $pad10;
+}
+.parent{
+  position: $parent;
+}
+.child{
+  position: $child;
+  top: $zero;
+  left: $zero;
+}
+.w50{
+  width: 50%;
+}
+.left{
+  float: $floatleft;
+}
+.right{
+  float: $floatright;
+}
+.icon{
+  font-size: $iconsize;
+  color:$textcolor;
+}
+.table{
+  display: $table;
+}
+.tablecell{
+  display: $tablecell;
+  vertical-align: $middlealign;
+}
+.w80{
+  width: $w80;
+  margin: $m-auto;
+}
+.text-center{
+  text-align: $text-center;
+}
+.overflowhidden-x{
+  overflow-x: $hidden;
+}
+.pointer{
+  cursor: $pointer;
+}
+.slide{
+  transition: $trasition;
+}
+// slide
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #fff;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #fff;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4;
+    margin-left: -100%;
+           
+    } 
+    to {opacity: 1;  
+      margin-left: 0%;
+     
+    }
+}
+
+@keyframes fade {
+  from {opacity: .4;
+    margin-left: -100%;
+           
+    } 
+    to {opacity: 1;  
+      margin-left: 0%;
+     
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
